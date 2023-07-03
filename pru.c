@@ -10,8 +10,8 @@ char *Carreras[7] = {"Ingenieria de Software", "Matematicas", "Ingenieria Indust
 // Creacion de la funcion main que contiene el codigo principal
 int main()
 {
-	FILE *archivo;
-    archivo=("Alumnos.txt", "w");
+	FILE *archivo;// creacion de variable tipo archivo
+    archivo=fopen("Alumnos.txt", "w");// 
 	// Se inicializan los numeros aleatorios
 	srand(time(NULL));
 	// Creacion de un arreglo tridimensional que contiene los 5 años, las 7 carreras y los 2 semestres.
@@ -43,7 +43,7 @@ int main()
 int Menu(int flag, int estudiantesmat[5][7][2])
 {
 	FILE *archivo;
-	archivo=("Alumos.txt", "w");
+	archivo=fopen("Alumos.txt", "w");
 	// Creacion de las variables para que el usuario pueda ingresar la opcion que desee y la variablle que se encarga de verificar si la respuesta colocada por el usuario es correcta
 	int opc, result;
 	int Menu = 1; // Variable booleana para observar el menu
